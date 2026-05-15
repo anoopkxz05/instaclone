@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTA</title>
+
+    <!--linking my stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--linking icon for the site-->
+    <link rel="icon" href="instagram.png">
+
+    <!--linking fot awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <!--linking google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <section id="navbar">
+        <div class="navbar">
+
+            <div class="navbar__logo">
+                <img src="instagram.png" alt="">
+            </div>
+
+            <div class="navbar__search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input placeholder="Search">
+            </div>
+
+            <div class="navbar__icons">
+                <i id="house" class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-circle-plus"></i>
+                <i class="fa-regular fa-compass"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i id="cart" class="fa-solid fa-ellipsis"></i>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sidebar">
+        <div class="sidebar"></div>
+    </section>
+
+    <section id="story">
+        <div class="story">
+            <div class="story__container">
+                <img src="https://i.pinimg.com/1200x/cb/56/8f/cb568f2fa486df1991c56b648fc63ff9.jpg" alt="hello">
+                <p>Doctor</p>
+            </div>
+
+            <div class="story__container">
+                <img src="https://i.pinimg.com/736x/de/74/09/de740975ccdb2bca56847fd169816175.jpg" alt="hello">
+                <p>Thor</p>
+            </div>
+
+            <div class="story__container">
+                <img src="https://i.pinimg.com/736x/05/29/20/0529206ee047656bd9d216167e482f1d.jpg" alt="hello">
+                <p>Anoop</p>
+            </div>
+
+            <div class="story__container">
+                <img src="https://i.pinimg.com/736x/ee/ba/62/eeba62e66183a0cfebd49835cf8b53f0.jpg" alt="hello">
+                <p>Stark</p>
+            </div>
+
+            <div class="story__container">
+                <img src="https://i.pinimg.com/736x/19/b6/eb/19b6eb4f62d86645d92639c6a4e58aeb.jpg" alt="hello">
+                <p>Spider</p>
+            </div>
+
+            <div class="story__container">
+                <img src="https://i.pinimg.com/736x/20/ba/d1/20bad1f49a94768e10ee84c51634ed4f.jpg" alt="hello">
+                <p>Messi</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="reel">
+        <div class="reel">
+            <div class="reel__top">
+                <img class="img" src="https://i.pinimg.com/736x/7e/46/c6/7e46c6d2798eff446b365c5246f4c9ca.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, reprehenderit!</p>
+            </div>
+            <img class="reel__img" src="https://i.pinimg.com/736x/15/26/4a/15264a214edbd4e820332d4338f2615d.jpg" alt="">
+        </div>
+    </section>
+
+    <script>
+
+        var cart = document.getElementById("cart");
+        var sidebar = document.querySelector(".sidebar");
+        var house = document.querySelector("#house");
+
+        cart.addEventListener("click", function () {
+
+            sidebar.style.visibility = "visible";
+        });
+
+        var sidebar = document.querySelector(".sidebar");
+        var house = document.querySelector("#house");
+
+        house.addEventListener("click", function () {
+
+            sidebar.style.visibility = "hidden";
+        });
+
+
+    </script>
+
+</body>
+
+</html>
