@@ -13,12 +13,18 @@ input:focus {
 
 /*-----navbar*/
 .navbar {
+    position: fixed;
     display: flex;
-    background-color: black;
-    color: white;
+    left: 0;
+    right: 0;
+    color: rgb(0, 0, 0);
     padding: 15px;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 0px 4px 0px rgba(104, 104, 104, 0.45);
+    z-index: 30;
+
+   
 }
 
 .navbar__logo {
@@ -47,7 +53,7 @@ input:focus {
 .navbar__search input {
     background-color: transparent;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /*-----navbar__icons*/
@@ -60,12 +66,13 @@ input:focus {
 
 .navbar__icons i {
     font-size: x-large;
+    transition: 0.3s ease;
 }
 
 .navbar__icons i:hover {
     cursor: pointer;
-    transition: 0.3s ease;
     color: rgb(164, 79, 243);
+    transform: scale(1.15);
 }
 
 /*----sidebar*/
@@ -80,16 +87,6 @@ input:focus {
     visibility: hidden;
     border-top: white 1px solid;
 }
-
-/* .sidebar{
-    width: 250px;
-    height: 100vh;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    right: 0;
-    visibility: hidden;
-} */
 
 /*----story*/
 
@@ -107,8 +104,8 @@ input:focus {
     gap: 0px;
     justify-content: space-between;
     align-items: center;
-
-    box-shadow: 0px 0px 4px 4px rgb(221, 221, 221);
+    margin-top: 90px;
+    box-shadow: 0px 0px 4px 0px rgba(104, 104, 104, 0.45);
 
 }
 
@@ -130,6 +127,10 @@ input:focus {
     padding: 3px;
 }
 
+.story__container img:hover{
+    box-shadow: 0px 0px 4px 4px rgb(221, 221, 221);
+}
+
 /*----reel*/
 
 #reel {
@@ -144,7 +145,7 @@ input:focus {
     margin-top: -20px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 4px 4px rgb(221, 221, 221);
+     box-shadow: 0px 0px 4px 0px rgba(104, 104, 104, 0.45);
 }
 
 .reel__img {
@@ -174,3 +175,43 @@ input:focus {
     border-radius: 60px;
 }
 
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar__icons {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .story {
+        overflow-x: scroll;
+        gap: 15px;
+    }
+
+    .story::-webkit-scrollbar {
+        display: none;
+    }
+
+    .story__container img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .reel {
+        width: 95%;
+        height: auto;
+    }
+
+    .reel__img {
+        height: auto;
+    }
+
+    .sidebar {
+        width: 70%;
+    }
+}
